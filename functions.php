@@ -74,7 +74,17 @@ function slider_post(){
 // add cmb2 
 require_once('/inc/cmb/custome.php');
 require_once('/inc/cmb/init.php');
+// add redux
 
+
+
+
+if ( !class_exists( 'redux-framework' ) && file_exists( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/redux-framework/sample/function-config.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/sample/function-config.php' );
+}
 
 
 
