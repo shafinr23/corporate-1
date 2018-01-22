@@ -2,13 +2,26 @@
 		<div class="footer-blurb">
 			<div class="container">
 				<div class="row">
-					
+					<?php
+					 $slidermy = NEW WP_Query(array(
+						'post_type'			 => array('foot'),
+						'posts_per_page'	=> 3,
+						));
+				while($slidermy->have_posts()):$slidermy->the_post(); ?>
 
 					<div class="col-sm-4 footer-blurb-item">
-						<h3><span class="glyphicon glyphicon-fire"></span> Dynamically Procrastinate</h3>
-						<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+						<h3><span class="glyphicon glyphicon-fire"></span> <?php the_title();?></h3>
+						<p><?php the_content(); ?></p>
 						<p><a class="btn btn-default" href="#">Procrastinate</a></p>
 					</div>
+
+
+				<?php
+				endwhile;
+
+					?>
+
+					
 
 					
 
