@@ -25,7 +25,16 @@
         
         <div class="small-print">
         	<div class="container">
-        		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        		 <p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p> 
+
+        		<?php  wp_nav_menu(array(
+        			'theme_location' => 'foot',
+        			'container' => 'div',
+                    'container_class' => 'small-print',
+        		)); ?>
+
+
+
         		<p>Copyright &copy; Example.com 2015 </p>
         	</div>
         </div>
