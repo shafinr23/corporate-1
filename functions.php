@@ -43,7 +43,8 @@ function all_fuction(){
 			}
 		}
 
-
+// post image 
+		add_theme_support( 'post-thumbnails' );
 
 
 
