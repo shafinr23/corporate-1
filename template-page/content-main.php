@@ -1,21 +1,17 @@
-<div class="jumbotron feature">
-		<div class="container">
-			<h1><span class="glyphicon glyphicon-equalizer"></span> Dramatically Engage</h1>
-			<p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
-			<p><a class="btn btn-default" href="#">Engage Now</a></p>
-		</div>
-	</div>
+<?php
 
+ global $corporate;
+?>
     <!-- Content -->
     <div class="container">
 
         <!-- Heading -->
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Superior Collaboration
-                    <small>Visualize Quality</small>
+            <div class="col-lg-12"  >
+                <h1 class="page-header"><?php echo $corporate['blogsf'];?>
+                    <small><?php echo $corporate['blogsfs'];?></small>
                 </h1>
-                <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.</p>
+                <p><?php echo $corporate['blogsfc'];?></p>
             </div>
         </div>
         <!-- /.row -->
