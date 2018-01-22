@@ -21,35 +21,43 @@
         <!-- /.row -->
 
         <!-- Feature Row -->
-        <div class="row">
-            <article class="col-md-4 article-intro">
-                <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
-                </a>
-                <h3>
-                    <a href="#">Efficiently Unleash</a>
-                </h3>
-                <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-            </article>
-            <article class="col-md-4 article-intro">
-                <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
-                </a>
-                <h3>
-                    <a href="#">Completely Synergize</a>
-                </h3>
-                <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
-            </article>
 
+
+
+        <?php
+                $postQ = NEW WP_Query(array(
+
+                    'post_type' => 'post',
+                    'posts_per_page' => 3,
+                ));
+        ?>
+        
+                 <?php
+                if($postQ->have_posts()):
+                while($postQ->have_posts()):$postQ->the_post();
+                ?>
+                <div class="row">
             <article class="col-md-4 article-intro">
                 <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
+                    <img class="img-responsive img-rounded" src="<?php the_post_thumbnail_url(); ?>" alt="">
                 </a>
-                <h3>
-                    <a href="#">Dynamically Procrastinate</a>
-                </h3>
-                <p>Professionally cultivate one-to-one customer service with robust ideas. Completely synergize resource taxing relationships via premier niche markets. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
-            </article>
+               
+                <?php the_title( '<h3>', '</h3>' ); ?>
+               
+                <p> <?php the_content(); ?></p>
+                </article>
+                <?php
+                //echo '<h1>'.get_the_title().'</h1></br>';
+               // echo '<p>'.the_content().'</p></br>';
+                endwhile;
+                 wp_reset_postdata();
+                else:
+                 echo 'nothing found';
+                endif;
+                ?>
+                
+            
+            
         </div>
         <!-- /.row -->
 
