@@ -1,5 +1,9 @@
+<?php
+
+ global $corporate;
+?>
 <footer>
-		<div class="footer-blurb">
+		<div class="footer-blurb" style="background-color: <?php echo $corporate['footersc'];?>; color:<?php echo $corporate['footersct'];?> ; " >
 			<div class="container">
 				<div class="row">
 					<?php
@@ -50,7 +54,7 @@
 
 
 
-        		<p>Copyright &copy; Example.com 2015 </p>
+        		<p><?php echo $corporate['copy'];?></p>
         	</div>
         </div>
 	</footer>
