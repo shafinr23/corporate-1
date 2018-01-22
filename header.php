@@ -33,7 +33,7 @@
                     <a class="navbar-brand" href="#">
                         <span class="logo">
                             
-                            <img src="<?php echo $corporate['logo']['url']; ?>" alt="">
+                            <img src="<?php echo $corporate['logo']['url']; ?>"  style="width: 60px; height: 40px;" alt="">
                         </span>
                       </a>
 
