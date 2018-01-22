@@ -71,6 +71,10 @@ function slider_post(){
 		));
 }
 
+// add cmb2 
+require_once('/inc/cmb/custome.php');
+require_once('/inc/cmb/init.php');
+
 
 
 
