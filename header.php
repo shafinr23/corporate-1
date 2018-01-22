@@ -1,3 +1,6 @@
+<?php 
+ global $corporate;
+?>
 <!DOCTYPE html>
 <!-- Template by Quackit.com -->
 <html lang="en">
@@ -26,10 +29,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
-                	<span class="glyphicon glyphicon-fire"></span> 
-                	Logo
-                </a>
+
+                    <a class="navbar-brand" href="#">
+                        <span class="logo">
+                            
+                            <img src="<?php echo $corporate['logo']['url']; ?>" alt="">
+                        </span>
+                      </a>
+
             </div>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
@@ -68,3 +75,11 @@
         </div>
         <!-- /.container -->
     </nav>
+
+    <div class="jumbotron feature" style="background-color:<?php echo $corporate['header_bgc'];?>; color:<?php echo $corporate['header_text_c'];?> ;">
+        <div class="container">
+            <h1><span class="glyphicon glyphicon-equalizer"></span> <?php echo $corporate['header_text'];?></h1>
+            <p><?php echo $corporate['header_sub'];?></p>
+            <p><a class="btn btn-default" href="#"><?php echo $corporate['buttont'];?></a></p>
+        </div>
+    </div>
