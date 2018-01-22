@@ -12,7 +12,15 @@
 					<div class="col-sm-4 footer-blurb-item">
 						<h3><span class="glyphicon glyphicon-fire"></span> <?php the_title();?></h3>
 						<p><?php the_content(); ?></p>
-						<p><a class="btn btn-default" href="#">Procrastinate</a></p>
+
+						<?php 
+						$button = get_post_meta(get_the_ID(),'button_name',true);
+						if ($button==true) {?>
+							<p><a class="btn btn-default" href="#"><?php echo $button ?></a></p>
+						
+						<?php
+					}?>
+						
 					</div>
 
 
