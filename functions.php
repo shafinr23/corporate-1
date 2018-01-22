@@ -45,6 +45,31 @@ function all_fuction(){
 
 // post image 
 		add_theme_support( 'post-thumbnails' );
+// custome post type
+		add_action('init','slider_post');
+
+function slider_post(){
+	register_post_type('foot', array(
+		'labels' => array(
+			'name' 				=> __('all footer-offer','textdomain'),
+			'singular_name'		=> __('footer-offert','textdomain'),
+			'add_new'			=>	__('add new footer-offer','textdomain'),
+			'add_new_item'		=>	__('add new footer-offer','textdomain'),
+			'search_items'		=>	__('search footer-offer','textdomain'),
+			'edit_item'			=>	__('edit footer-offer','textdomain'),
+			'all_items'			=>	__(' show all footer-offer','textdomain'),
+			'view_item'			=>	__('view footer-offer','textdomain'),
+			'not_found'			=>	__('no foot founder-offer','textdomain'),
+			),
+		'public'				=> true ,
+		'publicly_queryable'	=>	true ,
+		'show_url'				=>	true,
+		'show_in_menu'			=>	true,
+		'menu_icon'				=> 'dashicons-slides',
+		'capability_type'		=> 'page',
+		'supports'				=>	array('title','editor'),
+		));
+}
 
 
 
