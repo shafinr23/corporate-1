@@ -66,7 +66,7 @@ function slider_post(){
 		'show_url'				=>	true,
 		'show_in_menu'			=>	true,
 		'menu_icon'				=> 'dashicons-slides',
-		'capability_type'		=> 'page',
+		'capability_type'		=> 'post',
 		'supports'				=>	array('title','editor'),
 		));
 }
