@@ -31,21 +31,24 @@
                     'posts_per_page' => 3,
                 ));
         ?>
-        
+        <div class="row">
                  <?php
                 if($postQ->have_posts()):
                 while($postQ->have_posts()):$postQ->the_post();
                 ?>
-                <div class="row">
-            <article class="col-md-4 article-intro">
+                 <article class="col-md-4 article-intro">
                 <a href="#">
-                    <img class="img-responsive img-rounded" src="<?php the_post_thumbnail_url(); ?>" alt="">
+                    <img class="img-responsive img-rounded" style="width: 300px; height: 300px;" src="<?php the_post_thumbnail_url(); ?>" alt="">
                 </a>
-               
-                <?php the_title( '<h3>', '</h3>' ); ?>
-               
-                <p> <?php the_content(); ?></p>
+                <h3>
+                    <a href=""><?php the_title(); ?></a>
+                </h3>
+                <p> 
+                    <?php the_content(); ?>
+                        
+                </p>
                 </article>
+                
                 <?php
                 //echo '<h1>'.get_the_title().'</h1></br>';
                // echo '<p>'.the_content().'</p></br>';
@@ -57,9 +60,9 @@
                 ?>
                 
             
-            
-        </div>
-        <!-- /.row -->
+            </div>
+                <!-- /.row -->
+        
 
     </div>
     <!-- /.container -->
